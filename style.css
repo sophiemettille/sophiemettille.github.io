@@ -1,0 +1,271 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #476A6F;
+    color: #C5C9A4;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+}
+@media (max-width: 768px) {
+    #header {
+        height: auto; /* Let content dictate height on smaller screens */
+    }
+}
+.container{
+    padding: 10px 10%;
+    margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 10px 5%;
+    }
+}
+
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color:#C5C9A4;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #C5C9A4;
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+.header-text{
+    margin-top:20%;
+    font-size: 30px;
+    background: 
+}
+
+.header-text h1{
+    font-size: 3.75rem;
+    margin-top:20px;
+}
+.header-text h1 span{
+    color: #ECBEB4;
+}
+@media (max-width: 768px) {
+    .header-text {
+        font-size: 1.5rem;
+    }
+    .header-text h1 {
+        font-size: 2.25rem;
+    }
+}
+
+/*--------------about------------*/
+#about{
+    padding: 80px 0;
+    color:#ECBEB4;
+}
+.row{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.about-1{
+    flex-basis: 35%;
+}
+.about-1 img{
+    width: 100%;
+    border-radius: 30px;
+}
+
+.about-2{
+    flex-basis: 60%;
+}
+.subtitle{
+    font-size:3.75rem;
+    font-weight: 600;
+    color:#ECBEB4;
+}
+.tab-titles{
+    display:flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ECBEB4;
+    position: absolute;
+    left:0;
+    bottom:-8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #C5C9A4;
+    font-size: 14px;
+    font-weight: 1000;
+}
+.tab-contents{
+    display:none;
+}
+.tab-contents.active-tab{
+    display:block;
+}
+/*------Portfolio-------*/
+
+#portfolio{
+    padding: 50px 0;
+    margin-top: 75px;
+    overflow:hidden;
+}
+#portfolio .container .subtitle{
+    margin-top: 75px;
+}
+.worklist{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:40px;
+    margin-top:50px;
+}   
+.work{
+    border-radius: 10px;
+    position:relative;
+    overflow: hidden;
+}
+.work img{
+    max-width: 100%;
+    border-radius: 10px;
+    display:block;
+    transition: all .3s ease;
+}
+.work:hover img{
+    border: 5px solid #f8eaea;
+    border-radius: 10px;
+}
+/* ----- contact ------ */
+.contactleft{
+    flex-basis: 35%;
+
+}
+.contactright{
+    flex-basis: 60%;
+}
+
+.contactleft p{
+    margin-top: 30px;
+}
+
+.contactleft p i{
+    color: #ECBEB4;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #C5C9A4; 
+    display: inline-block;
+    transition: transform: 0.5s;
+}
+.social-icons a:hover{
+    color: #ecbeb4;
+    transform: translateY(-5px);
+}
+.btn{
+    background-color: #C5C9A4;
+    color: #476A6F;
+    border: 2px solid transparent;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    display:inline-block;
+    cursor: pointer;
+    transition: border 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    border: 5px solid #f8eaea;
+    border-radius: 10px;
+  }
+
+.contactright form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #2f4549;
+    color: #C5C9A4;
+    padding:15px;
+    margin:15px 0;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form btn{
+    padding: 14px 60px; 
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/*Case Studies*/
+.header-cs{
+    margin-top:20%;
+    font-size: 30px;
+    background: #2f4549;
+}
+.header-text-cs{
+    font-size: 40px;
+    margin:auto;
+    position: relative;
+    text-align: center;
+}
+h2{
+    font-size:30px;
+}

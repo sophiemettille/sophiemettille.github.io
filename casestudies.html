@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Case Studies</title>
+    <link rel="stylesheet" href = "style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header-cs">
+        <div class="container">
+          <nav>
+            <img src="images/sm.png" class = "logo">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About Me</a></li>
+              <li><a href="#">My Projects</a></li>
+              <li><a href="#">Contact Me</a></li>
+            </ul>
+          </nav>
+          <div class="header-text-cs">
+            <h1>Welcome to my Case Studies</h1>
+          </div>
+          <div class="tab">
+            <div class="tab-titles">
+                <h2 class = "tab-links active-link" onclick = "opentab('beautique')">Beautique</h3> 
+                <h2 class = "tab-links "onclick = "opentab('transitcat')">TransitCat</h3> 
+            </div>
+            <div class="tab-contents active-tab" id="beautique">
+                <div class="hero">
+                    <h2>
+                        Beautique: Ideation, Research, and Design Project
+                    </h2>
+                </div>
+            </div>
+              <div class="tab-contents" id="transitcat">
+                
+              </div>
+          </div>
+        </div>
+    </div>
+    
+    
+</body>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+      for (tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+</html>

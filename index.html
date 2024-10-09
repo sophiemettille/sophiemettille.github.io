@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sophie Mettille's Portfolio</title>
+    <link rel="stylesheet" href = "style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/sm.png" class = "logo">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">My Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Student, UI/UX Designer, Developer</p>
+          <h1>Hey!! I'm <span>Sophie<3</span><br> Nice to meet you!</h1>
+        </div>
+      </div>
+      <!---------------about--------------->
+      <div id="about">
+        <div class="container">
+          <div class ="row">
+            <div class = "about-1">
+              <img src="images/aboutme.jpeg">
+            </div>
+            <div class = "about-2">
+              <h1 class ="subtitle">About Me!! </h1>
+              <p>I am a computer science senior at Temple University in Philadelphia,PA. 
+                I have a passion for learning new skills, art, and meeting new people. 
+                I also love to try new things and I am manifesting a lot of travel in my future. Most importantly, I am excited to see you here and to hopefully spark a wonderful friendship YAY!
+              </p>
+              <div class="tab-titles">
+                <p class = "tab-links active-link" onclick = "opentab('skills')">Skills</p>
+                <p class = "tab-links" onclick = "opentab('experience')">Experience</p>
+                <p class = "tab-links" onclick = "opentab('education')">Education</p>
+              </div>
+              
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li><span>UI/UX</span><br>Designing Web App Interfaces</li>
+                  <li><span>Web Dev</span><br>Implementing my designs into usable websites (like this one)</li>
+                  <li><span>Project Management</span><br>being a manager for a project</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <li><span>2023-Current</span><br>Project Manager for Temple HCI Lab</li>
+                  <li><span>2022-Current</span><br>Creative Director of OwlHacks</li>
+                  <li><span>Summer 2024</span><br>UI/UX Design Intern at Coded By:</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li><span>2021-2025</span><br>BS Computer Science at Temple University</li>
+                  <li><span>2024-Current</span><br>Full Stack Engineer Bootcamp Codecademy</li>
+                </ul>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!----My Work------>
+<div id = "portfolio">
+  <div class = "container">
+    <h1 class = "subtitle">My Work!</h1>
+    <div class="worklist">
+      <div class="work">
+        <a href="casestudies.html"><img src="images/casestudies.png"></a>
+      </div>
+      <div class="work">
+        <a href="#"><img src="images/projects.png"></a>
+      </div>
+      <div class="work">
+        <a href="#"><img src="images/designwork.png"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!---Contact Me!!!-->
+<div id = "contact">
+  <div class = "container">
+      <div class="row">
+        <div class="contactleft">
+          <h1 class="subtitle">Connect with Me!</h1>
+          <p><i class="fa-solid fa-envelope"></i> smettille@me.com</p>
+          <p><i class="fa-solid fa-phone"></i> 2017496854</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/sophiemettille"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/sophiemettille"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <a href="/images/Sophia Mettille Resume 09.23.24.pdf" download class = "btn btn2">My Resume!</a>
+        </div>
+        <div class="contactright">
+          <form>
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows = "6" placeholder="Your Message"></textarea>
+            <button type ="submit" class = "btn">Submit!</button>
+          </form>
+        </div>
+  </div>
+  <div class="copyright"></div>
+  <p>Copyright © Sophie. Made with <i class="fa-solid fa-heart"></i></p>
+</div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname){
+        for (tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+  </html>
